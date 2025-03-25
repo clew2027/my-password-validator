@@ -26,4 +26,7 @@ def check_password():
     pw = data.get("password", "")
 
     # FIXME: to be implemented
-    return flask.jsonify({"valid": False, "reason": "Not implemented"}), 501
+    if len(pw) < 8:
+        return flask.jsonify({"valid":False, "reason": "Password too short"})
+
+    return flask.jsonify({"valid": True, "reason: "" }), 200
