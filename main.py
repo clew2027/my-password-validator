@@ -29,4 +29,4 @@ def check_password():
     if len(pw) < 8:
         return flask.jsonify({"valid":False, "reason": "Password too short"})
 
-    return flask.jsonify({"valid": True, "reason: "" }), 200
+    return flask.jsonify({"valid": True, "reason": "" }), 200
